@@ -3,27 +3,26 @@
 #include "Cal.h"
 using namespace std;
 
-FIRSTDLL_API int MathDll() {
+FIRSTDLL_API int CalculatorDll() {
 	while (true) {
-		cout << "Enter example:" << endl;
-		int a = 0, b = 0, result = 0;
+		cout << "Enter your exersice:" << endl;
+		int num1 = 0, num2 = 0, result = 0;
 		char sign = 0;
-		cin >> a >> sign >> b;
+		cin >> num1 >> sign >> num2;
 
 		if (sign == '+') {
-			result = a + b;
-		}
-		else if (sign == '-') {
-			result = a - b;
-		}
-		else if (sign == '*') {
-			result = a * b;
+			result = num1 + num2;
 		}
 		else if (sign == '/') {
-			result = a / b;
+			result = num1 / num2;
 		}
-		cout << a << " " << sign << " " << b << " = " << result << "\n\n";
-
+		else if (sign == '*') {
+			result = num1 * num2;
+		}
+		else if (sign == '-') {
+			result = num1 - num2;
+		}
+		cout << num1 << " " << sign << " " << num2 << " = " << result << "\n\n";
 	}
 	return 0;
 }
